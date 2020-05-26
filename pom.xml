@@ -11,22 +11,8 @@
   <sonar.projectKey>convaincu_jenkins-sample</sonar.projectKey>
   <sonar.organization>convaincu</sonar.organization>
   </properties>
-   <repositories>
-<repository>
-<id>maven-group</id>
-<url>http://35.187.84.181:8081/repository/maven-public/</url>
-</repository>
-</repositories>
-<distributionManagement>
-<snapshotRepository>
-<id>nexus-snapshots</id>
-<url>http://35.187.84.181:8081/repository/mavensnapshots/</url>
-</snapshotRepository>
-<repository>
-<id>nexus-releases</id>
-<url>http://35.187.84.181:8081/repository/mavenreleases/</url>
-</repository>
-</distributionManagement>
+
+  
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -35,4 +21,30 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+  
+ <repositories>
+	<repository>
+		<id>maven-group</id>
+		<url>http://35.187.84.181:8081/repository/maven-public/</url>
+	</repository>
+</repositories>
+<distributionManagement>
+	<snapshotRepository>
+		<id>nexus-snapshots</id>
+		<url>http://35.187.84.181:8081/repository/maven-snapshots/</url>
+	</snapshotRepository>
+	<repository>
+		<id>nexus-releases</id>
+		<url>http://35.187.84.181:8081/repository/maven-releases/</url>
+	</repository>
+</distributionManagement>
+
+	<scm>
+		<connection>scm:git:https://github.com/convaincu/jenkins-sample.git</connection>
+		<url>https://github.com/convaincu/jenkins-sample.git</url>
+		<developerConnection>scm:git:https://github.com/convaincu/jenkins-sample.git</developerConnection>
+        <tag>HEAD</tag>
+		
+  </scm>
+  
 </project>
