@@ -46,6 +46,6 @@ public class AppTest
     
     public void testApp2()
     {
-        assertTrue(1);
+        assertTrue(1==1);
     }
 }
